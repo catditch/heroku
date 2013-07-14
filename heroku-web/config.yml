@@ -1,0 +1,23 @@
+http:
+  port: 8080
+  adminPort: 8081
+  connectorType: legacy
+  rootPath: /*
+
+logging:
+  level: INFO
+  console:
+    threshold: DEBUG
+    timeZone: "UTC"
+  file:
+    enabled: false
+    threshold: INFO
+    currentLogFilename: logs/log4j.heroku-web
+    archivedLogFilenamePattern: logs/log4j.heroku-web.%d.gz
+    archivedFileCount: 7
+    timeZone: "UTC"
+  syslog:
+    enabled: false
+    threshold: INFO
+    host: localhost
+    facility: user
